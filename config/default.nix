@@ -1,7 +1,7 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./bufferline.nix
+    ./base_plugins.nix
     ./options.nix
     ./statusline.nix
   ];
