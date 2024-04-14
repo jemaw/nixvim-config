@@ -18,10 +18,10 @@
     updatetime = 50;  # faster completions
     completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
-    # Folding (nvim-ufo)
+    # TODO: switch to nvim-ufo
     foldcolumn = "1";
-    foldlevel = 99;
-    foldlevelstart = 99;
+    foldlevelstart = 3;
+    foldnestmax = 3;
     foldenable = true;
 
     # searching #
