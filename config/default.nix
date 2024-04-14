@@ -9,4 +9,5 @@
   ];
   colorschemes.kanagawa.enable = true;
   opts.termguicolors = true;
+  clipboard.register = "unnamedplus";
 }

@@ -19,7 +19,7 @@
     completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
     # TODO: switch to nvim-ufo
-    foldcolumn = "1";
+    foldcolumn = "0";
     foldlevelstart = 3;
     foldnestmax = 3;
     foldenable = true;
