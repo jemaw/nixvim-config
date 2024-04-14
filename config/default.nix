@@ -7,7 +7,7 @@
     ./keymaps.nix
     ./plugins
   ];
-  colorschemes.kanagawa.enable = true;
+  colorschemes.catppuccin.enable = true;
   opts.termguicolors = true;
   clipboard.register = "unnamedplus";
 }
