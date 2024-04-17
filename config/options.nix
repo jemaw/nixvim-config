@@ -6,17 +6,17 @@
   opts = {
 
     # basics #
-    number = true;  # show line numbers
-    signcolumn = "number";  # show extra signs in the number column
-    breakindent = true;  # smarter wrapping of lines
-    hidden = true;  # allows unsaved buffers
-    title = true;  # change window title
-    showmode = false;  # don't show mode
+    number = true; # show line numbers
+    signcolumn = "number"; # show extra signs in the number column
+    breakindent = true; # smarter wrapping of lines
+    hidden = true; # allows unsaved buffers
+    title = true; # change window title
+    showmode = false; # don't show mode
     colorcolumn = "120";
 
     # completion #
-    updatetime = 50;  # faster completions
-    completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
+    updatetime = 50; # faster completions
+    completeopt = [ "menuone" "noselect" "noinsert" ]; # mostly just for cmp
 
     # TODO: switch to nvim-ufo
     foldcolumn = "0";
@@ -26,9 +26,9 @@
 
     # searching #
     ignorecase = true;
-    smartcase = true;  # Ignore case for searching except for capital letters at beginning
-    incsearch = true;  # show results as you type
-    inc = "split";  # preview effects of substitute command
+    smartcase = true; # Ignore case for searching except for capital letters at beginning
+    incsearch = true; # show results as you type
+    inc = "split"; # preview effects of substitute command
 
     # ripgrep #
     grepprg = "rg --vimgrep";

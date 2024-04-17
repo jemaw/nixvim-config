@@ -12,12 +12,12 @@
 
     settings = {
       pickers = {
-	git_files = {
-	  show_untracked = false;
-	};
-	find_files = {
-	  hidden = true;
-	};
+        git_files = {
+          show_untracked = false;
+        };
+        find_files = {
+          hidden = true;
+        };
       };
       defaults = {
         mappings = {
