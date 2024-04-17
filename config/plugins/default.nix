@@ -3,6 +3,7 @@
     ./tree.nix
     ./autocomplete.nix
     ./telescope.nix
+    ./lsp.nix
   ];
 
   # misc

@@ -22,8 +22,8 @@
     { mode = "n"; key = "<CR>"; action = "noh<CR><CR>"; }
 
     # fast switch from insert mode
-    { mode = "n"; key = "kj"; action = "<c-c>`^"; }
-    { mode = "n"; key = "kjs"; action = "<c-c>`^:w<CR>"; }
+    { mode = "i"; key = "kj"; action = "<c-c>`^"; }
+    { mode = "i"; key = "kjs"; action = "<c-c>`^:w<CR>"; }
 
     # split moving
     { mode = "n"; key = "<C-h>"; action = "<C-w>h"; }
