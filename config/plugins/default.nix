@@ -1,7 +1,8 @@
 {
-  imports = [ 
+  imports = [
     ./tree.nix
     ./autocomplete.nix
+    ./telescope.nix
   ];
 
   # misc
@@ -24,8 +25,23 @@
   # languages
   plugins.nix.enable = true;
 
+
   # maybe in future
   plugins.bufferline.enable = false;
   plugins.nvim-ufo.enable = false;
 
+  plugins.toggleterm = {
+    enable = true;
+    settings = {
+      direction = "float";
+      float_opts = {
+        border = "curved";
+        height = 30;
+        width = 130;
+      };
+      open_mapping = "[[<c-space>]]";
+    };
+  };
+
 }
+
