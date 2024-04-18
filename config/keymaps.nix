@@ -5,10 +5,11 @@
 
     # quickswitch
     { mode = "n"; key = "<bs>"; action = "<c-^>"; }
+
     # quick save and exit
-    { mode = "n"; key = "<leader>w"; action = ":w<CR>"; }
-    { mode = "n"; key = "<leader>q"; action = ":q<CR>"; }
-    { mode = "n"; key = "<leader>wq"; action = ":wq<CR>"; }
+    { mode = "n"; key = "<leader>w"; action = ":w<CR>"; options = { silent = true; }; }
+    { mode = "n"; key = "<leader>q"; action = ":q<CR>"; options = { silent = true; }; }
+    { mode = "n"; key = "<leader>wq"; action = ":wq<CR>"; options = { silent = true; }; }
 
     # move lines in visual mode
     { mode = "v"; key = "J"; action = ":m '>+1<CR>gv=gv"; }
@@ -18,8 +19,8 @@
     { mode = "n"; key = "j"; action = "gj"; options = { silent = true; }; }
     { mode = "n"; key = "k"; action = "gk"; options = { silent = true; }; }
 
-    # highlihg remove
-    { mode = "n"; key = "<CR>"; action = "noh<CR><CR>"; }
+    # highlight remove
+    { mode = "n"; key = "<CR>"; action = ":noh<CR>"; options = { silent = true; }; }
 
     # fast switch from insert mode
     { mode = "i"; key = "kj"; action = "<c-c>`^"; }

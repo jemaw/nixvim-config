@@ -1,12 +1,12 @@
 {
-  description = "A nixvim configuration";
+  description = "Nixvim Config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    # neovim nightly for testing inlay hints in 0.10
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-
   };
 
   outputs =
@@ -34,16 +34,13 @@
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
-            module = import ./config { inherit pkgs; }; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
+            module = import ./config { inherit pkgs; };
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
         {
 
+          # using overlays with flake parts
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
             overlays = [
