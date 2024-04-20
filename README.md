@@ -1,7 +1,8 @@
-# Nixvim template
+# ❄️ Nixvim config
 
 Based on:
 - https://github.com/elythh/nixvim
+- https://github.com/nix-community/nixvim/tree/main/templates/simple
 - https://github.com/jemaw/nvimrc_lua
 
 This template gives you a good starting point for configuring nixvim standalone.
