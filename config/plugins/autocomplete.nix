@@ -12,7 +12,7 @@
     cmdline = {
       "/" = {
         mapping.__raw = "cmp.mapping.preset.cmdline()";
-        sources = [{ name = "buffer"; }];
+        sources = [ { name = "buffer"; } ];
       };
       ":" = {
         mapping.__raw = "cmp.mapping.preset.cmdline()";
@@ -34,39 +34,40 @@
         { name = "cmp-zsh"; }
       ];
 
-      mapping.__raw = '' {
-		["<cr>"] = cmp.mapping.confirm({ select = false }),
-		["<Tab>"] = cmp.mapping(function(fallback)
-            local luasnip = require('luasnip')
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			elseif has_words_before() then
-				cmp.complete()
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-		["<S-Tab>"] = cmp.mapping(function(fallback)
-            -- TODO (is there a better way to do the require only once?)
-            local luasnip = require('luasnip')
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-		["<C-u>"] = cmp.mapping.scroll_docs(-4),
-		["<C-d>"] = cmp.mapping.scroll_docs(4),
-		["<Up>"] = cmp.mapping.select_prev_item(select_opts),
-		["<Down>"] = cmp.mapping.select_next_item(select_opts),
+      mapping.__raw = ''
+         {
+        		["<cr>"] = cmp.mapping.confirm({ select = false }),
+        		["<Tab>"] = cmp.mapping(function(fallback)
+                    local luasnip = require('luasnip')
+        			if cmp.visible() then
+        				cmp.select_next_item()
+        			elseif luasnip.expand_or_jumpable() then
+        				luasnip.expand_or_jump()
+        			elseif has_words_before() then
+        				cmp.complete()
+        			else
+        				fallback()
+        			end
+        		end, { "i", "s" }),
+        		["<S-Tab>"] = cmp.mapping(function(fallback)
+                    -- TODO (is there a better way to do the require only once?)
+                    local luasnip = require('luasnip')
+        			if cmp.visible() then
+        				cmp.select_prev_item()
+        			elseif luasnip.jumpable(-1) then
+        				luasnip.jump(-1)
+        			else
+        				fallback()
+        			end
+        		end, { "i", "s" }),
+        		["<C-u>"] = cmp.mapping.scroll_docs(-4),
+        		["<C-d>"] = cmp.mapping.scroll_docs(4),
+        		["<Up>"] = cmp.mapping.select_prev_item(select_opts),
+        		["<Down>"] = cmp.mapping.select_next_item(select_opts),
 
-		["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
-		["<C-n>"] = cmp.mapping.select_next_item(select_opts),
-      }'';
+        		["<C-p>"] = cmp.mapping.select_prev_item(select_opts),
+        		["<C-n>"] = cmp.mapping.select_next_item(select_opts),
+              }'';
       snippet.expand = ''
         function(args)
           require('luasnip').lsp_expand(args.body)
@@ -87,7 +88,5 @@
         };
       };
     };
-
   };
-
 }

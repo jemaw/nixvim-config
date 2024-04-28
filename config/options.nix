@@ -16,7 +16,11 @@
 
     # completion #
     updatetime = 50; # faster completions
-    completeopt = [ "menuone" "noselect" "noinsert" ]; # mostly just for cmp
+    completeopt = [
+      "menuone"
+      "noselect"
+      "noinsert"
+    ]; # mostly just for cmp
 
     # TODO: switch to nvim-ufo
     foldcolumn = "0";

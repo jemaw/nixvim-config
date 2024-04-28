@@ -17,14 +17,12 @@
   # ui
   plugins.noice.enable = true;
 
-
   # snippets
   plugins.luasnip.enable = true;
   plugins.friendly-snippets.enable = true;
 
   # languages
   plugins.nix.enable = true;
-
 
   # maybe in future
   plugins.bufferline.enable = false;
@@ -42,6 +40,4 @@
       open_mapping = "[[<c-space>]]";
     };
   };
-
 }
-

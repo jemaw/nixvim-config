@@ -10,10 +10,7 @@
   };
 
   outputs =
-    { nixvim
-    , flake-parts
-    , ...
-    } @ inputs:
+    { nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -23,10 +20,7 @@
       ];
 
       perSystem =
-        { pkgs
-        , system
-        , ...
-        }:
+        { pkgs, system, ... }:
 
         let
 
@@ -43,9 +37,7 @@
           # using overlays with flake parts
           _module.args.pkgs = import inputs.nixpkgs {
             inherit system;
-            overlays = [
-              inputs.neovim-nightly-overlay.overlay
-            ];
+            overlays = [ inputs.neovim-nightly-overlay.overlay ];
           };
 
           checks = {

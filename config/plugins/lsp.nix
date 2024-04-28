@@ -1,6 +1,5 @@
 {
 
-
   plugins.lsp = {
     enable = true;
     keymaps = {
@@ -26,7 +25,7 @@
       pyright.enable = true;
       nil_ls = {
         enable = true;
-        settings.formatting.command = [ "nixpkgs-fmt" ];
+        settings.formatting.command = [ "nixfmt" ];
       };
     };
   };
@@ -58,5 +57,4 @@
     end
     vim.keymap.set("n", "<Leader>l", ":call v:lua.toggle_diagnostics()<CR>", {silent = true, noremap=true})
   '';
-
 }
