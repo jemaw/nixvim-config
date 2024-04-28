@@ -23,6 +23,7 @@
       };
     };
     settings = {
+      completion.keyword_length = 2;
       sources = [
         { name = "nvim_lsp"; }
         { name = "buffer"; }
@@ -30,7 +31,6 @@
         { name = "nvim_lsp_signature_help"; }
         { name = "luasnip"; }
         { name = "path"; }
-        { name = "cmdline"; }
         { name = "cmp-zsh"; }
       ];
 
@@ -75,8 +75,16 @@
 
       # needs some fiddling with the colorscheme
       window = {
-        completion.border = "rounded";
-        documentation.border = "rounded";
+        completion = {
+          border = "rounded";
+          # nicer background for bordered
+          # https://github.com/catppuccin/nvim/issues/439#issuecomment-1482379531
+          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None";
+        };
+        documentation = {
+          border = "rounded";
+          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None";
+        };
       };
     };
 
