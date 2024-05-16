@@ -25,7 +25,7 @@
       pyright.enable = true;
       nil_ls = {
         enable = true;
-        settings.formatting.command = [ "nixfmt" ];
+        settings.formatting.command = [ "nixpkgs-fmt" ];
       };
     };
   };
