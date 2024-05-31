@@ -1,6 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  # Import all your configuration modules here
   imports = [
     ./options.nix
     ./statusline.nix
@@ -11,5 +10,4 @@
   colorschemes.catppuccin.enable = true;
   opts.termguicolors = true;
   clipboard.register = "unnamedplus";
-  package = pkgs.neovim-nightly;
 }

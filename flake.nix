@@ -3,10 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-parts.url = "github:hercules-ci/flake-parts";
-    # neovim nightly for testing inlay hints in 0.10
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs =
@@ -33,12 +34,6 @@
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
         {
-
-          # using overlays with flake parts
-          _module.args.pkgs = import inputs.nixpkgs {
-            inherit system;
-            overlays = [ inputs.neovim-nightly-overlay.overlay ];
-          };
 
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
