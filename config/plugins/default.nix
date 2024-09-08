@@ -12,7 +12,6 @@
   plugins.sleuth.enable = true;
   plugins.gitsigns.enable = true;
   plugins.todo-comments.enable = true;
-  plugins.neoscroll.enable = true;
 
   # ui
   plugins.noice.enable = true;
