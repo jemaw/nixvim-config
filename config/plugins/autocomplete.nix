@@ -12,7 +12,7 @@
     cmdline = {
       "/" = {
         mapping.__raw = "cmp.mapping.preset.cmdline()";
-        sources = [{ name = "buffer"; }];
+        sources = [ { name = "buffer"; } ];
       };
       ":" = {
         mapping.__raw = "cmp.mapping.preset.cmdline()";

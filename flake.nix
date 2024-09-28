@@ -40,6 +40,8 @@
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
+          formatter = pkgs.nixfmt-rfc-style;
+
           packages = {
             # Lets you run `nix run .` to start nixvim
             default = nvim;

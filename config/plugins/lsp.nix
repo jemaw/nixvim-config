@@ -27,7 +27,7 @@
       hls.enable = true;
       nil-ls = {
         enable = true;
-        settings.formatting.command = [ "nixpkgs-fmt" ];
+        settings.formatting.command = [ "nixfmt" ];
       };
     };
   };
