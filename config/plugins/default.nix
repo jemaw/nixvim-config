@@ -15,6 +15,7 @@
 
   # ui
   plugins.noice.enable = true;
+  plugins.web-devicons.enable = true;
 
   # snippets
   plugins.luasnip.enable = true;
