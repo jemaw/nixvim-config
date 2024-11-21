@@ -25,7 +25,7 @@
       zls.enable = true;
       pyright.enable = true;
       hls.enable = true;
-      nil-ls = {
+      nil_ls = {
         enable = true;
         settings.formatting.command = [ "nixfmt" ];
       };
