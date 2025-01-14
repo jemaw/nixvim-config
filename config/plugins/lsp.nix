@@ -16,6 +16,7 @@
         "gi" = "implementation";
         "<C-k>" = "signature_help";
         "<Leader>cw" = "rename";
+        "<F2>" = "rename";
         "gr" = "references";
         "<leader>f" = "format";
       };
