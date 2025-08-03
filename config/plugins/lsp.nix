@@ -25,11 +25,33 @@
       bashls.enable = true;
       zls.enable = true;
       pyright.enable = true;
-      hls.enable = true;
+      hls = {
+        enable = true;
+        installGhc = true;
+      };
       nil_ls = {
         enable = true;
         settings.formatting.command = [ "nixfmt" ];
       };
+      lua_ls = {
+        enable = true;
+        settings = {
+          Lua = {
+            runtime.version = "LuaJIT";
+            diagnostics.globals = [ "vim" ];
+            workspace.checkThirdParty = false;
+            telemetry.enable = false;
+          };
+        };
+      };
+      taplo.enable = true;
+      html.enable = true;
+      cssls.enable = true;
+      jsonls.enable = true;
+      dockerls.enable = true;
+      terraformls.enable = true;
+      marksman.enable = true;
+      yamlls.enable = true;
     };
   };
 
