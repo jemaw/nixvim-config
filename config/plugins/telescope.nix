@@ -17,6 +17,27 @@
         };
         find_files = {
           hidden = true;
+          file_ignore_patterns = [ 
+            "^%.git/"
+            "node_modules/"
+            "target/"
+            "%.class$"
+            "%.jar$"
+            "%.war$"
+            "__pycache__/"
+            "%.pyc$"
+            "%.pyo$"
+            "dist/"
+            "build/"
+            "%.o$"
+            "%.so$"
+            "%.dylib$"
+            "%.dll$"
+            "result"
+            "%.direnv/"
+            "%.vscode/"
+            "%.idea/"
+          ];
         };
       };
       defaults = {

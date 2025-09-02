@@ -32,7 +32,6 @@
     ignorecase = true;
     smartcase = true; # Ignore case for searching except for capital letters at beginning
     incsearch = true; # show results as you type
-    inc = "split"; # preview effects of substitute command
 
     # ripgrep #
     grepprg = "rg --vimgrep";
