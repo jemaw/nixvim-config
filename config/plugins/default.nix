@@ -18,7 +18,6 @@
   plugins.web-devicons.enable = true;
 
   # snippets
-  plugins.luasnip.enable = true;
   plugins.friendly-snippets.enable = true;
 
   # languages

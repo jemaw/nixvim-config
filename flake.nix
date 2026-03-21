@@ -20,16 +20,19 @@
         "aarch64-darwin"
       ];
 
+      flake = {
+        homeManagerModules.default = import ./config;
+      };
+
       perSystem =
         { pkgs, system, ... }:
 
         let
-
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
-            module = import ./config { inherit pkgs; };
+            module = import ./config;
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
