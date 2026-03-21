@@ -34,7 +34,10 @@
         ];
       };
       cmdline = {
-        sources = [ "cmdline" "path" ];
+        sources = [
+          "cmdline"
+          "path"
+        ];
       };
     };
   };

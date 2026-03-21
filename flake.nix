@@ -48,7 +48,7 @@
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
-          formatter = pkgs.nixfmt-rfc-style;
+          formatter = pkgs.nixfmt-tree;
 
           packages = {
             # Lets you run `nix run .` to start nixvim

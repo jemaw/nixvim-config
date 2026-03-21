@@ -17,7 +17,7 @@
         };
         find_files = {
           hidden = true;
-          file_ignore_patterns = [ 
+          file_ignore_patterns = [
             "^%.git/"
             "node_modules/"
             "target/"
