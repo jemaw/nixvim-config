@@ -21,7 +21,12 @@
       ];
 
       flake = {
-        homeManagerModules.default = import ./config;
+        homeManagerModules.default = {
+          programs.nixvim = {
+            enable = true;
+            imports = [ ./config ];
+          };
+        };
       };
 
       perSystem =
@@ -29,12 +34,12 @@
 
         let
           nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
+          nixvimPkgs = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
             module = import ./config;
           };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
+          nvim = nixvimPkgs.makeNixvimWithModule nixvimModule;
         in
         {
 
