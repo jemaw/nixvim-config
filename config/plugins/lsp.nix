@@ -12,12 +12,11 @@
       lspBuf = {
         "gd" = "definition";
         "gD" = "declaration";
-        "K" = "hover";
         "gi" = "implementation";
         "<C-k>" = "signature_help";
         "<Leader>cw" = "rename";
         "<F2>" = "rename";
-        "gr" = "references";
+        "grr" = "references";
         "<leader>f" = "format";
       };
     };
@@ -74,7 +73,7 @@
     function _G.toggle_diagnostics()
     	if vim.g.diagnostics_visible then
     		vim.g.diagnostics_visible = false
-    		vim.diagnostic.disable()
+    		vim.diagnostic.enable(false)
     	else
     		vim.g.diagnostics_visible = true
     		vim.diagnostic.enable()

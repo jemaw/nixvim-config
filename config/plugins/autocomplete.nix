@@ -25,13 +25,18 @@
       };
       signature.enabled = true;
       sources = {
-        min_keyword_length = 2;
         default = [
           "lsp"
           "path"
           "snippets"
           "buffer"
         ];
+        providers = {
+          lsp.min_keyword_length = 2;
+          path.min_keyword_length = 2;
+          snippets.min_keyword_length = 2;
+          buffer.min_keyword_length = 2;
+        };
       };
       cmdline = {
         sources = [

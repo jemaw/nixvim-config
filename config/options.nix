@@ -6,6 +6,7 @@
   opts = {
 
     # basics #
+    swapfile = false;
     number = true; # show line numbers
     signcolumn = "number"; # show extra signs in the number column
     breakindent = true; # smarter wrapping of lines
