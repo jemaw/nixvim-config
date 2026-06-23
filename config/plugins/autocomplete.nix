@@ -17,10 +17,10 @@
       };
       completion = {
         list.selection.preselect = false;
-        menu.border = "rounded";
+        menu.border = "none";
         documentation = {
           auto_show = true;
-          window.border = "rounded";
+          window.border = "single";
         };
       };
       signature.enabled = true;
@@ -39,6 +39,8 @@
         };
       };
       cmdline = {
+        keymap.preset = "cmdline";
+        completion.list.selection.preselect = false;
         sources = [
           "cmdline"
           "path"

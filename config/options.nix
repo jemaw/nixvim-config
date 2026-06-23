@@ -2,6 +2,7 @@
   extraConfigLua = ''
     -- Avoid showing extra messages when using completion
     vim.opt.shortmess:append("c")
+    vim.o.winborder = "single"
   '';
   opts = {
 
@@ -28,6 +29,9 @@
     foldlevelstart = 3;
     foldnestmax = 3;
     foldenable = true;
+
+    # cmdline completion #
+    wildmode = "longest:full,full";
 
     # searching #
     ignorecase = true;
