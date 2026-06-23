@@ -17,7 +17,6 @@
         "<Leader>cw" = "rename";
         "<F2>" = "rename";
         "grr" = "references";
-        "<leader>f" = "format";
       };
     };
     servers = {

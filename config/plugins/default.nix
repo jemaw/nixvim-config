@@ -4,6 +4,7 @@
     ./autocomplete.nix
     ./telescope.nix
     ./lsp.nix
+    ./conform.nix
   ];
 
   # misc
@@ -16,6 +17,15 @@
   # ui
   plugins.noice.enable = true;
   plugins.web-devicons.enable = true;
+
+  plugins.snacks = {
+    enable = true;
+    settings = {
+      bigfile.enabled = true;
+      indent.enabled = true;
+      words.enabled = true;
+    };
+  };
 
   # snippets
   plugins.friendly-snippets.enable = true;
