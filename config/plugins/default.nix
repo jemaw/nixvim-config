@@ -89,6 +89,13 @@
       options.silent = true;
       options.desc = "Live grep";
     }
+    {
+      mode = "n";
+      key = "<leader>C";
+      action.__raw = "function() Snacks.picker.colorschemes() end";
+      options.silent = true;
+      options.desc = "Colorschemes";
+    }
   ];
 
   # snippets

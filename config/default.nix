@@ -17,6 +17,14 @@
     zenbones-nvim
     lush-nvim
     modus-themes-nvim
+    papercolor-theme
+    rose-pine
+    tokyonight-nvim
+    nightfox-nvim
+    everforest
+    melange-nvim
+    gruvbox-material
+    oxocarbon-nvim
     (pkgs.vimUtils.buildVimPlugin {
       name = "github-monochrome-nvim";
       src = pkgs.fetchFromGitHub {
