@@ -1,18 +1,8 @@
 {
   extraConfigLua = ''
-    -- https://shapeshed.com/vim-statuslines/
-    local function git_branch()
-        local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-        if string.len(branch) > 0 then
-            return branch
-        else
-            return ":"
-        end
-    end
-
     local function statusline()
         local set_color_1 = "%#PmenuSel#"
-        local branch = git_branch()
+        local branch = vim.b.gitsigns_head or ":"
         local set_color_2 = "%#LineNr#"
         local file_name = " %f"
         local modified = "%m"

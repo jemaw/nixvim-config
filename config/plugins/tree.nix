@@ -1,10 +1,11 @@
 {
-  plugins.nvim-tree.enable = true;
   keymaps = [
     {
       mode = "n";
       key = "<leader>n";
-      action = "<cmd>NvimTreeToggle<cr>";
+      action.__raw = "function() Snacks.explorer() end";
+      options.silent = true;
+      options.desc = "File explorer";
     }
   ];
 }

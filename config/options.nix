@@ -17,12 +17,7 @@
     colorcolumn = "120";
 
     # completion #
-    updatetime = 50; # faster completions
-    completeopt = [
-      "menuone"
-      "noselect"
-      "noinsert"
-    ]; # mostly just for cmp
+    updatetime = 50;
 
     # TODO: switch to nvim-ufo
     foldcolumn = "0";

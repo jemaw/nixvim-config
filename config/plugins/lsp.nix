@@ -6,8 +6,6 @@
     keymaps = {
       diagnostic = {
         "<leader>d" = "open_float";
-        "[d" = "goto_prev";
-        "]d" = "goto_next";
       };
       lspBuf = {
         "gd" = "definition";
@@ -27,10 +25,7 @@
         enable = true;
         installGhc = true;
       };
-      nil_ls = {
-        enable = true;
-        settings.formatting.command = [ "nixfmt" ];
-      };
+      nil_ls.enable = true;
       lua_ls = {
         enable = true;
         settings = {
@@ -53,8 +48,6 @@
     };
   };
 
-  plugins.lspkind.enable = true;
-
   plugins.rustaceanvim = {
     enable = true;
     # TODO: something like should be supplied to rust analyzer to unblock
@@ -67,17 +60,10 @@
   };
 
   extraConfigLua = ''
-    -- toggle_diagnostics
-    vim.g.diagnostics_visible = true
-    function _G.toggle_diagnostics()
-    	if vim.g.diagnostics_visible then
-    		vim.g.diagnostics_visible = false
-    		vim.diagnostic.enable(false)
-    	else
-    		vim.g.diagnostics_visible = true
-    		vim.diagnostic.enable()
-    	end
-    end
-    vim.keymap.set("n", "<Leader>l", ":call v:lua.toggle_diagnostics()<CR>", {silent = true, noremap=true})
+    vim.keymap.set("n", "<Leader>l", function()
+      vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+    end, { silent = true, noremap = true })
+    vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { silent = true })
+    vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { silent = true })
   '';
 }

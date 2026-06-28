@@ -2,7 +2,6 @@
   imports = [
     ./tree.nix
     ./autocomplete.nix
-    ./telescope.nix
     ./lsp.nix
     ./conform.nix
   ];
@@ -22,10 +21,13 @@
     enable = true;
     settings = {
       bigfile.enabled = true;
+      scroll.enabled = true;
+      explorer.enabled = true;
       indent.enabled = false;
       words.enabled = true;
       picker = {
         enabled = true;
+        ui_select = true;
         win.input.border = "single";
         win.list.border = "single";
         win.preview.border = "single";
@@ -94,10 +96,6 @@
 
   # languages
   plugins.nix.enable = true;
-
-  # maybe in future
-  plugins.bufferline.enable = false;
-  plugins.nvim-ufo.enable = false;
 
   plugins.toggleterm = {
     enable = true;

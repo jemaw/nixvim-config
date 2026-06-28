@@ -23,7 +23,7 @@
         owner = "idr4n";
         repo = "github-monochrome.nvim";
         rev = "e77321ecd5a68f020d9c543592e222d7786169bf";
-        sha256 = "1bhhkg455wgl384488l271w3kq24dhxl7f25rs1npcdcgzqrxs6v";
+        hash = "sha256-2+ie8X+ssWuDzkW4QztsROA5eDiCIkQIGvTxUsibEK4=";
       };
     })
     (pkgs.vimUtils.buildVimPlugin {
@@ -32,10 +32,11 @@
         owner = "p00f";
         repo = "alabaster.nvim";
         rev = "b902c73fabefc13583bfc0c18b28950ea8f6244f";
-        sha256 = "1dr309ddrr9d3m1dyjs565cfsxdgwaz51n0s19d9xkv5jybyg7s6";
+        hash = "sha256-Rp/nl5dlz55aChrYUL7ir3XtWDFFS99CHS3l3FoCI7c=";
       };
     })
   ];
+  extraPackages = with pkgs; [ fd ripgrep ];
   opts.termguicolors = true;
   clipboard.register = "unnamedplus";
 }
